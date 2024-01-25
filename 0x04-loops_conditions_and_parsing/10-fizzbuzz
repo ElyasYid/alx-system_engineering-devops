@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# displays numbers 1-100 except in some instances.
+
+NUM=1
+while [ $NUM -lt 101 ]
+do
+    if [ $((NUM%15)) = 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ $((NUM%3)) = 0 ]
+    then
+        echo "Fizz"
+    elif [ $((NUM%5)) = 0 ]
+    then
+        echo "Buzz"
+    else
+        echo "$NUM"
+    fi
+    (( NUM+=1 ))
+done

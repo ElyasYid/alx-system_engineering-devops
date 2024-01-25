@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# displays Best School 10 times except on the 9th
+
+NUM=0
+while [ $NUM -lt 11 ]
+do
+    if [ $NUM = 9 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    (( NUM+=1 ))
+done

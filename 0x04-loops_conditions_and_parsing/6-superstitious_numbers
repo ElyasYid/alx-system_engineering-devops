@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# displays numbers from 1 to 20 with some unlucky numbers
+
+NUM=1
+while [ $NUM -lt 21 ]
+do
+    case $NUM in
+
+        4)
+	    echo $NUM
+	    echo "bad luck from China"
+	    ;;
+	
+	9)
+	    echo $NUM
+	    echo "bad luck from Japan"
+	    ;;
+	
+	17)
+	    echo $NUM
+	    echo "bad luck from Italy"
+	    ;;
+
+	*)
+	    echo $NUM
+	    ;;
+    esac
+
+    (( NUM+=1 ))
+done
